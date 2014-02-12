@@ -892,6 +892,11 @@
           originX: 'center',
           originY: 'center'
         }));
+
+        if (this._currentTransform) {
+          this._currentTransform.target = this.getActiveGroup();
+        }
+
         activeGroup.forEachObject(function(o) {
           o.set('active', true);
         });
